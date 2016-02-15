@@ -1,0 +1,77 @@
+// Font Stacks
+
+@import url(https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400italic,700);
+@import url("//hello.myfonts.net/count/3054cc");
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+@font-face {font-family: 'Civita-Light';src: url('webfonts/3054CC_0_0.eot');src: url('webfonts/3054CC_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/3054CC_0_0.woff2') format('woff2'),url('webfonts/3054CC_0_0.woff') format('woff'),url('webfonts/3054CC_0_0.ttf') format('truetype');}
+@import url(https://fonts.googleapis.com/css?family=Scheherazade:400,700);
+
+$font-family--primary    : 'Scheherazade', serif;
+$font-family--secondary  : 'Libre Baskerville', Helvetica, Arial, sans-serif;
+
+// Susy
+
+$susy: (
+  columns: 12,
+  gutters: .25,
+  container: 960px
+);
+
+// Breakpoints
+
+$bp_xs: 480px;
+$bp_s: 786px;
+$bp_m: 992px;
+$bp_l: 1200px;
+
+// Colors
+
+$c_mighty_slate     : #556270;
+$c_pacifica         : #4ECDC4;
+$c_apple_chic       : #C7F464;
+$c_cheery_pink      : #FF6B6B;
+$c_grandmas         : #C44D58;
+$c_crema            : #F6F6F6;
+
+
+
+$white    : #fff;
+$black    : #0b0b0b;
+$grey     : #797e83;
+
+
+
+// Color Usage
+
+$color-primary   : $c_mighty_slate;
+$color-secondary : $c_cheery_pink;
+$color-terciary  : $c_pacifica;
+$color-accent    : $c_apple_chic;
+$color-shadow    : rgba($black, .2);
+$color-background: $c_crema;
+
+// Color Palette Modifiers
+
+$color-palettes: (
+  grey: (
+    xx-light : lighten($grey, 43%),
+    x-light  : lighten($grey, 35%),
+    light    : lighten($grey, 12%),
+    base     : $grey,
+    dark     : darken($grey, 8%),
+    x-dark   : darken($grey, 16%)
+  ),
+  black: (
+    light    : lighten($black, 10%),
+    base     : $black,
+    dark     : darken($black, 10%)
+  )
+);
+
+
+
+
+// Modular Scale
+
+$ms-base: 1.3em;
+$ms-ratio: 1.618,1.067;

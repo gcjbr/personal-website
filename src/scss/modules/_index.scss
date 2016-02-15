@@ -1,0 +1,46 @@
+
+
+h1.title {
+  font-size: ms(16);
+  margin:2em 0 0 0;
+
+  div {
+    font-size: ms(4);
+  }
+}
+
+h2.sub-title {
+  font-weight: 400;
+  font-size: ms(3);
+}
+
+
+
+// SMALL DEVICES
+@include breakpoint($bp_s) {
+
+
+
+
+
+}
+
+// MEDIUM DEVICES
+
+@include breakpoint($bp_m) {
+
+  h1.title {
+    font-size: ms(20);
+  }
+
+
+}
+
+
+// LARGE DEVICES
+
+@include breakpoint($bp_l) {
+
+
+
+}

@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+
+
+}
+
+body {
+  background-color: $color-background;
+  font-family: $font-family--secondary;
+}
+
+
+h1 {
+  font-size: ms(18);
+  color: $color-primary;
+  font-family: $font-family--primary;
+  font-weight: 400;
+  line-height: ms(-2);
+
+  div {
+    display: inline-block;
+    color: $color-secondary;
+  }
+}
+
+
+p {
+  font-size: ms(0);
+  line-height: ms(0) * 1.4;
+}
+
+

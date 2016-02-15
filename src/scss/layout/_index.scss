@@ -1,0 +1,49 @@
+
+.content, .header {
+  @include container;
+}
+
+.header {
+}
+
+
+.main, .nav {
+  @include span(12);
+}
+
+
+
+
+// SMALL DEVICES
+@include breakpoint($bp_s) {
+
+
+
+
+  .main {
+    @include span(6);
+  }
+
+  .nav {
+   @include span(6 last);
+ }
+
+}
+
+// MEDIUM DEVICES
+
+@include breakpoint($bp_m) {
+
+
+
+
+}
+
+
+// LARGE DEVICES
+
+@include breakpoint($bp_l) {
+
+
+
+}
