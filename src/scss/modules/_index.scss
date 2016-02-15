@@ -16,6 +16,51 @@ h2.sub-title {
 
 
 
+// Photo grid
+
+
+/* ---- grid ---- */
+
+.grid {
+  background: #DDD;
+  width:100%;
+}
+
+/* clear fix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* ---- .grid-item ---- */
+
+
+
+  .grid-sizer,
+  .grid-item {
+    width: 100%;
+  }
+
+  .grid-item {
+
+    cursor: pointer;
+    background-color: #666;
+
+  img {
+    display: block;
+    max-width: 100%;
+    opacity: 0.5;
+
+
+    &:hover {
+      opacity:1;
+      transition: 1s;
+    }
+
+  }
+}
+
 // SMALL DEVICES
 @include breakpoint($bp_s) {
 
@@ -32,6 +77,18 @@ h2.sub-title {
   h1.title {
     font-size: ms(20);
   }
+
+  .grid-sizer,
+  .grid-item {
+    width: 33.333%;
+  }
+
+  .grid-item {
+    float: left;
+
+  }
+
+
 
 
 }
