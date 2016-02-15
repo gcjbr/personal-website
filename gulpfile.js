@@ -1,9 +1,10 @@
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var sourcemaps = require('gulp-sourcemaps');
-var autoprefixer = require('gulp-autoprefixer');
-var browserSync = require('browser-sync');
-var minifyHTML  = require('gulp-minify-html');
+var gulp          = require('gulp');
+var sass          = require('gulp-sass');
+var sourcemaps    = require('gulp-sourcemaps');
+var autoprefixer  = require('gulp-autoprefixer');
+var browserSync   = require('browser-sync');
+var minifyHTML    = require('gulp-minify-html');
+var concat        = require('gulp-concat');
 
 
 
@@ -61,18 +62,32 @@ gulp.task('minify-html', function() {
 
 });
 
+//compiling our Javascripts
+gulp.task('scripts', function() {
+    //this is where our dev JS scripts are
+    return gulp.src(bases.app+'js/**/*')
+                //this is the filename of the compressed version of our JS
+                //compress :D
+                //.pipe(uglify())
+                //where we will store our finalized, compressed script
+
+                .pipe(gulp.dest(bases.dist+'js'))
+                //notify browserSync to refresh
+                .pipe(browserSync.reload({stream: true}));
+});
 
 
 
 gulp.task('watch', function() {
   gulp.watch(bases.app + 'scss/**/*.scss', ['sass']);
   gulp.watch(bases.app + './*.html', ['minify-html']);
+  gulp.watch(bases.app + 'js/', ['scripts']);
 
 
 });
 
 
-gulp.task('default', ['browserSync','sass', 'watch']);
+gulp.task('default', ['browserSync','sass', 'scripts', 'watch']);
 gulp.task('prod', function () {
   return gulp
     .src(bases.app)
