@@ -9,12 +9,17 @@
 $font-family--primary    : 'Scheherazade', serif;
 $font-family--secondary  : 'Libre Baskerville', Helvetica, Arial, sans-serif;
 
+
+// Icons
+@import url(http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
+
+
 // Susy
 
 $susy: (
   columns: 12,
   gutters: .25,
-  container: 960px
+  container: 1200px
 );
 
 // Breakpoints
