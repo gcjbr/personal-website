@@ -8,29 +8,74 @@ html, body {
 
 }
 
+a {
+  text-decoration: underline dotted;
+}
+
 body {
   background-color: $color-background;
-  font-family: $font-family--secondary;
+  font-family: $font-family--primary;
+  color: $color-primary;
 }
 
 
 h1 {
-  font-size: ms(18);
+  font-size: ms(10);
   color: $color-primary;
-  font-family: $font-family--primary;
+  font-family: $font-family--secondary;
   font-weight: 400;
-  line-height: ms(-2);
+  font-style: italic;
+
 
   div {
-    display: inline-block;
     color: $color-secondary;
+
   }
+}
+
+h2 {
+  font-size: ms(10);
+  font-family: $font-family--secondary;
+  font-weight: 400;
+  text-align: center;
+  font-style: italic;
+  display: inline-block;
+    border-top: solid 2px;
+
 }
 
 
 p {
-  font-size: ms(0);
+  font-size: ms(-2);
   line-height: ms(0) * 1.4;
+  font-weight: 400;
 }
 
+ blockquote {
+    color: $color-background;
+    font-family: $font-family--secondary ;
+    font-size: ms(-2);
+    vertical-align: center;
+    font-style: italic;
+
+  }
+
+
+
+
+@include breakpoint($bp_m) {
+
+  p  {
+
+  font-size: ms(-1);
+  }
+
+
+  h2{
+
+    font-size: ms(14);
+
+  }
+
+}
 

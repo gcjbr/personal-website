@@ -1,111 +1,172 @@
-
-
-h1.title {
-  font-size: ms(16);
-  margin:2em 0 0 0;
-
-  div {
-    font-size: ms(4);
-  }
-}
-
-h2.sub-title {
+h1.title,
+h2.sub-title
+ {
+  margin:0;
+  font-family: $font-family--primary;
+  color: $c_grey;
   font-weight: 400;
-  font-size: ms(3);
+  font-size: ms(2);
+  font-style: normal;
+  border: none;
+
+ }
+
+ h1.title {
+  div {
+    font-family: $font-family--secondary;
+    font-weight: 400;
+    font-size: ms(12);
+    font-style: italic;
+
+  }
+ }
+
+
+.skills__list {
+  list-style: none;
+
+  padding: 0;
+
 }
 
-.content, .header {
-  padding: 0 2em;
+.skills__item {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+
 }
+
+ .skills__name {
+    margin-right: ms(0);
+    font-size: ms(-1);
+
+    font-weight: 500;
+    width:30%;
+
+  }
+
+.skills__bar {
+  height: 30px;
+  width: 40%;
+  background-color: $c_greylight ;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  padding: 3px;
+
+
+}
+
+.skills__bar__fill {
+  background-color: $color-secondary;
+  height: 22px;
+
+}
+.skills__bar__fill--good {
+  width:100%;
+}
+
+.skills__bar__fill--experience {
+  width:50%;
+
+
+}
+
+.skills__bar__fill--curious {
+  width:15%;
+
+
+}
+
 
 
 // Photo grid
 
 
-/* ---- grid ---- */
+// /* ---- grid ---- */
 
-.grid {
-  background: #DDD;
-  width:100%;
-}
+// .grid {
+//   background: #DDD;
+//   width:100%;
+// }
 
-/* clear fix */
-.grid:after {
-  content: '';
-  display: block;
-  clear: both;
-}
+// /* clear fix */
+// .grid:after {
+//   content: '';
+//   display: block;
+//   clear: both;
+// }
 
-/* ---- .grid-item ---- */
-
-
-
-
-.grid__item {
-  width: 100%;
-  cursor: pointer;
-  background-color: #666;
-  position: relative;
-  background-color: #229955;
-
-
-  * {
-    transition: all 0.4s ease-in-out;
-  }
-
-  img {
-    max-width: 100%;
-
-
-  }
-
-  i {
-
-  position: absolute;
-  top: 0%;
-  left: 50%;
-  border-radius: 50%;
-  font-size: 34px;
-  color: #000000;
-  width: 60px;
-  height: 60px;
-  line-height: 60px;
-  background: #ffffff;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
-  opacity: 100;
-  transform: translate(-50%, -100%);
-  transition: all 300ms 0ms cubic-bezier(0.6, -0.28, 0.735, 0.045);
-  color: #1e8449;
+// /* ---- .grid-item ---- */
 
 
 
-  }
 
-  a {
-     left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  position: absolute;
-  }
-}
+// .grid__item {
+//   width: 100%;
+//   cursor: pointer;
+//   background-color: #666;
+//   position: relative;
+//   background-color: #229955;
 
 
+//   * {
+//     transition: all 0.4s ease-in-out;
+//   }
 
-.grid__item:hover img,
-.grid__item.hover img {
-  opacity: 0.3;
-  -webkit-filter: grayscale(100%);
-  filter: grayscale(100%);
-}
-.grid__item:hover i,
-.grid__item.hover i {
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  transition: all 300ms 100ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  opacity: 1;
-}
+//   img {
+//     max-width: 100%;
+
+
+//   }
+
+//   i {
+
+//   position: absolute;
+//   top: 0%;
+//   left: 50%;
+//   border-radius: 50%;
+//   font-size: 34px;
+//   color: #000000;
+//   width: 60px;
+//   height: 60px;
+//   line-height: 60px;
+//   background: #ffffff;
+//   box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+//   opacity: 100;
+//   transform: translate(-50%, -100%);
+//   transition: all 300ms 0ms cubic-bezier(0.6, -0.28, 0.735, 0.045);
+//   color: #1e8449;
+
+
+
+//   }
+
+//   a {
+//      left: 0;
+//   right: 0;
+//   top: 0;
+//   bottom: 0;
+//   position: absolute;
+//   }
+// }
+
+
+
+// .grid__item:hover img,
+// .grid__item.hover img {
+//   opacity: 0.3;
+//   -webkit-filter: grayscale(100%);
+//   filter: grayscale(100%);
+// }
+// .grid__item:hover i,
+// .grid__item.hover i {
+//   top: 50%;
+//   -webkit-transform: translate(-50%, -50%);
+//   transform: translate(-50%, -50%);
+//   transition: all 300ms 100ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+//   opacity: 1;
+// }
 
 
 
@@ -132,7 +193,10 @@ h2.sub-title {
 @include breakpoint($bp_m) {
 
   h1.title {
-    font-size: ms(20);
+    font-size: ms(4);
+    div {
+      font-size: ms(18);
+    }
   }
 
 

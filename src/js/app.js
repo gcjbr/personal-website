@@ -10,3 +10,12 @@
 // $grid.imagesLoaded().progress( function() {
 //   $grid.masonry();
 // });
+
+
+$(window).scroll(function () {
+    var scrollTop = $(window).scrollTop();
+    var height = $(window).height();
+    $('.header').css({
+        'opacity': ((height - scrollTop) / height)
+    });
+});

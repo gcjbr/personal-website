@@ -1,9 +1,20 @@
 
-.content, .header {
+.content, .skills {
   @include container;
+  padding: 0 2em;
+
 }
 
+
+
 .header {
+  height: 100%;
+  width: 100%;
+  background-color: $color-four;
+  text-align: center;
+  display:flex;
+  align-items: center;
+  justify-content: center;
 }
 
 
@@ -12,6 +23,81 @@
 }
 
 
+
+/*
+    About
+    */
+
+    .about__profile, .about__bio {
+
+      padding: 2em;
+
+    }
+
+    .quote {
+      display: flex;
+      background-color:red;
+      height: 100%;
+    }
+
+    .about__profile{
+
+      background-color: $color-primary;
+      min-height: 250px;
+      text-align: center;
+
+
+      h2 {
+        color: $color-secondary;
+        margin-top:0;
+        border-color: $color-secondary;
+      }
+
+
+
+    }
+
+    .about__bio {
+      background-color: $color-secondary;
+      strong {
+        color: $color-terciary;
+        font-weight: 400;
+      }
+
+
+    }
+
+
+
+/*
+    Skills
+    */
+
+    .skills .title {
+      width: 100%;
+      text-align: center;
+
+    }
+
+.skills{
+  @extend %clearfix;
+}
+
+
+.skills h3 {
+  font-family: $font-family--secondary;
+  font-size: ms(5);
+  font-weight: 400;
+  font-style: italic;
+  margin-bottom: ms();
+  color: $color-five ;
+
+}
+
+.good, .experience, .know, .speak {
+    margin-bottom: 3em;
+  padding:1em;
+}
 
 
 // SMALL DEVICES
@@ -27,7 +113,6 @@
   .nav {
    @include span(6 last);
  }
-
 }
 
 // MEDIUM DEVICES
@@ -35,9 +120,53 @@
 @include breakpoint($bp_m) {
 
 
+ /*
+    About
+    */
+
+
+    .about {
+      display:flex;
+      flex-wrap:wrap;
+    }
+
+    .about__profile{
+      @include span(6);
+
+
+
+      blockquote {
+        font-size:ms(2);
+      }
+
+    }
+
+    .about__bio,
+    .about__profile
+    {
+      @include span (6);
+      padding: 2em;
+    }
+
+
+ /*
+    Skills
+ */
+
+.good, .experience, .know, .speak {
+  @include gallery(6 of 12);
+  margin-bottom: 1em;
+  display: inline-block;
+  padding: 0 3em 0 0;
+
+  }
+
 
 
 }
+
+
+
 
 
 // LARGE DEVICES
