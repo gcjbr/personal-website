@@ -22,6 +22,19 @@
   @include span(12);
 }
 
+/*======================================
+=               COMMON                 =
+======================================*/
+
+.skills, .photo{
+  padding-bottom: ms(11);
+
+  .title {
+      width: 100%;
+      text-align: center;
+
+    }
+}
 
 
 /*
@@ -73,18 +86,13 @@
 =               SKILLS                =
 ======================================*/
 
-.skills .title {
-      width: 100%;
-      text-align: center;
 
-    }
 
 .skills{
   @extend %clearfix;
-}
 
 
-.skills h3 {
+h3 {
   font-family: $font-family--secondary;
   font-size: ms(5);
   font-weight: 400;
@@ -92,8 +100,8 @@
   margin-bottom: ms();
   color: $color-five ;
 
+  }
 }
-
 .good, .experience, .know, .speak {
     margin-bottom: 3em;
   padding:1em;
@@ -104,8 +112,17 @@
 =               GALLERY                =
 ======================================*/
 
+.photo {
+  background-color: $color-primary ;
+  .title {
+    color: $color-secondary;
+  }
+}
+
 .gallery {
   width: 100%;
+
+
 
 }
 
