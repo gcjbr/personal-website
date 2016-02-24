@@ -5,3 +5,11 @@
     clear: both;
   }
 }
+
+@mixin generateColumns ($arr) {
+  @each $num in $arr {
+    &--#{$num} {
+      width:#{$num}%;
+    }
+  }
+}
