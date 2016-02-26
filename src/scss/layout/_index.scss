@@ -30,10 +30,10 @@
   padding-bottom: ms(11);
 
   .title {
-      width: 100%;
-      text-align: center;
+    width: 100%;
+    text-align: center;
 
-    }
+  }
 }
 
 
@@ -92,19 +92,73 @@
   @extend %clearfix;
 
 
-h3 {
-  font-family: $font-family--secondary;
-  font-size: ms(5);
-  font-weight: 400;
-  font-style: italic;
-  margin-bottom: ms();
-  color: $color-five ;
+  h3 {
+    font-family: $font-family--secondary;
+    font-size: ms(5);
+    font-weight: 400;
+    font-style: italic;
+    margin-bottom: ms();
+    color: $color-five ;
 
   }
 }
 .good, .experience, .know, .speak {
-    margin-bottom: 3em;
+  margin-bottom: 3em;
   padding:1em;
+}
+
+
+
+.skills__gallery {
+  @extend %clearfix;
+
+}
+
+
+.skills__list {
+  list-style: none;
+
+  padding: 0;
+
+}
+
+.skills__item {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+
+}
+
+.skills__name {
+  margin-right: ms(0);
+  font-size: ms(-1);
+
+  font-weight: 500;
+  width:30%;
+
+}
+
+.skills__bar {
+  height: 30px;
+  width: 40%;
+  background-color: $c_greylight ;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  padding: 3px;
+
+
+
+
+  &__fill {
+    background-color: $color-secondary;
+    height: 22px;
+
+    @include generateColumns ($skill-scores);
+
+  }
+
+
 }
 
 
@@ -124,26 +178,44 @@ h3 {
 
 
 
-}
 
-.gallery__figure {
-    background-color: beige;
+
+  &__figure {
+    background-color: $color-secondary;
     overflow: hidden;
     padding: 0;
     margin: 0;
     height: 33.333333vh;
+    position: relative;
+    text-align: center;
+
+
 
 
     img {
 
-          object-fit: cover;
-          width: 100%;
-          height: 100%;
-          border: 0;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      border: 0;
 
 
+      &:hover {
+        opacity: 0.2;
+      }
+
+      a {
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        position: absolute;
+      }
 
     }
+
+  }
+
 
 }
 
@@ -168,67 +240,67 @@ h3 {
  }
 
 
-/*----------  GALLERY  ----------*/
+ /*----------  GALLERY  ----------*/
 
 
-.gallery__figure {
-    @include gallery(6 of 12);
-    margin: 0;
-    padding: 0;
-    height: 50vh;
+ .gallery__figure {
+  @include gallery(6 of 12);
+  margin: 0;
+  padding: 0;
+  height: 50vh;
 
 
+
+}
 
 }
 
-}
+
 /*======================================
 =            MEDIUM DEVICES            =
 ======================================*/
 
-
-
 @include breakpoint($bp_m) {
 
 
-/*----------  ABOUT  ----------*/
+  /*----------  ABOUT  ----------*/
 
 
 
-    .about {
-      display:flex;
-      flex-wrap:wrap;
+  .about {
+    display:flex;
+    flex-wrap:wrap;
+  }
+
+  .about__profile{
+    @include span(6);
+
+
+
+    blockquote {
+      font-size:ms(2);
     }
 
-    .about__profile{
-      @include span(6);
+  }
 
-
-
-      blockquote {
-        font-size:ms(2);
-      }
-
-    }
-
-    .about__bio,
-    .about__profile
-    {
-      @include span (6);
-      padding: 2em;
-    }
+  .about__bio,
+  .about__profile
+  {
+    @include span (6);
+    padding: 2em;
+  }
 
 
 
 
-/*----------  SKILLS  ----------*/
+  /*----------  SKILLS  ----------*/
 
 
-.good, .experience, .know, .speak {
-  @include gallery(6 of 12);
-  margin-bottom: 1em;
-  display: inline-block;
-  padding: 0 3em 0 0;
+  .good, .experience, .know, .speak {
+    @include gallery(6 of 12);
+    margin-bottom: 1em;
+    display: inline-block;
+    padding: 0 3em 0 0;
 
   }
 
@@ -237,13 +309,13 @@ h3 {
   /*----------  GALLERY  ----------*/
 
 
-.gallery__figure {
+  .gallery__figure {
     @include gallery(4 of 12);
     margin: 0;
     padding: 0;
 
 
-}
+  }
 
 
 

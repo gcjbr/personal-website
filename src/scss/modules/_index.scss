@@ -11,66 +11,15 @@ h2.sub-title
 
 }
 
-h1.title {
-  div {
+h1.title
+{
+  div
+  {
     font-family: $font-family--secondary;
     font-weight: 400;
     font-size: ms(12);
     font-style: italic;
-
   }
-}
-
-.skills__gallery {
-  @extend %clearfix;
-
-}
-
-
-.skills__list {
-  list-style: none;
-
-  padding: 0;
-
-}
-
-.skills__item {
-  margin-bottom: 10px;
-  display: flex;
-  align-items: center;
-
-}
-
-.skills__name {
-  margin-right: ms(0);
-  font-size: ms(-1);
-
-  font-weight: 500;
-  width:30%;
-
-}
-
-.skills__bar {
-  height: 30px;
-  width: 40%;
-  background-color: $c_greylight ;
-  flex-grow: 1;
-  display: flex;
-  align-items: center;
-  padding: 3px;
-
-
-
-
-  &__fill {
-    background-color: $color-secondary;
-    height: 22px;
-
-    @include generateColumns ($skill-scores);
-
-  }
-
-
 }
 
 
@@ -95,7 +44,7 @@ h1.title {
  font-weight: 700;
  margin: ms(1) auto;
 
- &:after {
+  &:after {
   position: absolute;
   transition: .3s;
   content: '';
@@ -107,8 +56,9 @@ h1.title {
   height: 120%;
   left: -10%;
   z-index: -1;
-}
-&:hover {
+  }
+
+  &:hover {
   cursor: pointer;
   color: $color-background;
   background: none;
@@ -116,8 +66,10 @@ h1.title {
   &:after {
     width: 100%;
     left: 0;
+    }
+
   }
-}
+
 }
 
 
