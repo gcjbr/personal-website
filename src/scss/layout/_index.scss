@@ -154,7 +154,7 @@
     //background-color: $color-secondary;
     height: 22px;
 
-    @include generateColumns ($color-secondary, $color-four, $skill-scores);
+    @include generateBars ($color-four, $color-secondary, $skill-scores);
 
   }
 

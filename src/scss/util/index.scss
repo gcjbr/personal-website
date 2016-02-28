@@ -6,14 +6,13 @@
   }
 }
 
-@mixin generateColumns ($c1, $c2, $arr) {
+@mixin generateBars ($c1, $c2, $arr) {
   @each $num in $arr {
+    @if ($num >= 0) and ($num <=100)  {
     &--#{$num} {
-      width:#{$num}%;
-      $amount: ($num - 100) * -1;
-
-      @debug $amount;
-      background-color: mix($c2, $c1, $amount);
+      width: $num * 1%;
+      background-color: mix($c2, $c1, $num);
+      }
     }
   }
 }
