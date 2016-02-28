@@ -1,6 +1,38 @@
+/**
+ *
+ * Defaults
+ *
+ */
+
+
+/* Sets box-sizing to border-box */
+
 * {
   box-sizing: border-box;
 }
+
+/* Set viewport rules for viewport compatible browsers and IE 10 */
+
+@viewport{
+    zoom: 1.0;
+    width: extend-to-zoom;
+}
+
+@-ms-viewport{
+    width: extend-to-zoom;
+    zoom: 1.0;
+}
+
+
+
+/**
+ *
+ * Custom rules
+ *
+ */
+
+
+
 
 html, body {
     height: 100%;

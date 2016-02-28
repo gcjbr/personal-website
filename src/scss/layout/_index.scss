@@ -151,10 +151,10 @@
 
 
   &__fill {
-    background-color: $color-secondary;
+    //background-color: $color-secondary;
     height: 22px;
 
-    @include generateColumns ($skill-scores);
+    @include generateColumns ($color-secondary, $color-four, $skill-scores);
 
   }
 
