@@ -181,7 +181,9 @@
   width: 100%;
 
 
-
+  * {
+     transition: all 0.5s ease;
+   }
 
 
   &__figure {
@@ -192,8 +194,67 @@
     height: 33.333333vh;
     position: relative;
     text-align: center;
+    position: relative;
+    cursor: pointer;
 
 
+    &__info {
+
+      position: absolute;
+      z-index:10;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      display: flex;
+      align-items: center;
+          justify-content: center;
+
+
+
+
+    }
+
+
+   &__title {
+
+      font-size: ms(10);
+      font-family: $font-family--secondary;
+      color: $color-background;
+
+
+    }
+
+
+    &__open:hover::before {
+      color: $color-primary;
+    }
+
+    &__open::before {
+      font-family: Icomoon;
+      speak: none;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+
+      font-size: ms(10);
+      content: "\e986";
+      color: $color-secondary;
+      background: $color-background;
+      border-radius: 50%;
+      height: 60px;
+      width: 60px;
+      display: block;
+      margin: auto;
+      align-self: center;
+
+
+
+
+    }
 
 
     img {
@@ -202,19 +263,6 @@
       width: 100%;
       height: 100%;
       border: 0;
-
-
-      &:hover {
-        opacity: 0.2;
-      }
-
-      a {
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        position: absolute;
-      }
 
     }
 

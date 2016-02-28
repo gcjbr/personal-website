@@ -81,7 +81,7 @@ gulp.task('scripts', function() {
 gulp.task('watch', function() {
   gulp.watch(bases.app + 'scss/**/*.scss', ['sass']);
   gulp.watch(bases.app + './*.html', ['minify-html']);
-  gulp.watch(bases.app + 'js/', ['scripts']);
+  gulp.watch(bases.app + 'js/*.js', ['scripts']);
 
 
 });

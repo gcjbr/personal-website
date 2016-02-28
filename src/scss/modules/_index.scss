@@ -44,6 +44,14 @@ h1.title
  font-weight: 700;
  margin: ms(1) auto;
 
+ a {
+  color: $color-five ;
+  text-decoration: none;
+  &:hover {
+    color: $color-background;
+  }
+ }
+
   &:after {
   position: absolute;
   transition: .3s;
@@ -62,6 +70,9 @@ h1.title
   cursor: pointer;
   color: $color-background;
   background: none;
+    a {
+      color: $color-background;
+    }
 
   &:after {
     width: 100%;
