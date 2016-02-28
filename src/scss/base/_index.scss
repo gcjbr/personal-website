@@ -72,7 +72,7 @@ h2 {
   text-align: center;
   font-style: italic;
   display: inline-block;
-    border-top: solid 2px;
+  border-top: solid 2px;
 
 }
 
@@ -92,6 +92,9 @@ p {
 
   }
 
+cite {
+        color: $color-secondary;
+      }
 
 
 
@@ -99,7 +102,8 @@ p {
 
   p  {
 
-  font-size: ms(-1);
+  font-size: ms(-2);
+  font-weight: 400;
   }
 
 

@@ -2,6 +2,12 @@
 
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,400italic,500,500italic,600italic,600);
 @import url(https://fonts.googleapis.com/css?family=Lora:400,700,400italic);
+@font-face {
+  font-family: 'IcoMoon';
+
+  src: url('IcoMoon-Free.ttf')  format('truetype'); /* Legacy iOS */
+}
+
 
 $font-family--primary    : 'Raleway', serif;
 $font-family--secondary  : 'Lora', serif;

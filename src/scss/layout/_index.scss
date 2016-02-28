@@ -10,11 +10,13 @@
 .header {
   height: 100%;
   width: 100%;
-  background-color: $color-four;
   text-align: center;
   display:flex;
   align-items: center;
   justify-content: center;
+  background:  $color-five; /* fallback for old browsers */
+  background: linear-gradient(to left, $color-four , $color-five);
+
 }
 
 
@@ -37,9 +39,9 @@
 }
 
 
-/*
-    About
-    */
+/*======================================
+=               ABOUT                  =
+======================================*/
 
     .about__profile, .about__bio {
 
@@ -49,8 +51,9 @@
 
     .quote {
       display: flex;
-      background-color:red;
       height: 100%;
+
+
     }
 
     .about__profile{
@@ -71,10 +74,10 @@
     }
 
     .about__bio {
-      background-color: $color-secondary;
+      background-color: lighten($color-secondary, 10);
       strong {
-        color: $color-terciary;
-        font-weight: 400;
+        color: $color-five;
+        font-weight: 600;
       }
 
 
@@ -168,6 +171,7 @@
 
 .photo {
   background-color: $color-primary ;
+  @extend %clearfix;
   .title {
     color: $color-secondary;
   }
@@ -219,6 +223,127 @@
 
 }
 
+/*======================================
+=               CONTACT                =
+======================================*/
+
+.contact {
+  width: 100%;
+  background-color: $color-primary ;
+  color: $color-background;
+    @extend %clearfix;
+
+
+  .title {
+    text-align: center;
+  }
+  h2 {
+    color: $color-secondary;
+  }
+
+
+a {
+      color: $color-four;
+
+      text-decoration: none;
+      border-bottom: dashed 1px $color-background;
+
+      &:hover {
+        border-bottom: dashed 1px $color-five;
+        color: $color-secondary;
+
+      }
+    }
+
+    strong {
+      color: $color-secondary;
+    }
+
+}
+
+
+ .contact_links, .contact__text {
+  padding: 2em;
+ }
+
+.contact__email {
+  text-align: center;
+
+  a {
+    font-size: ms(4);
+    text-decoration: none;
+
+    &:hover {
+      color: $color-secondary;
+
+
+    }
+
+    span {
+      color: $color-background;
+
+
+    }
+
+  }
+
+  margin-bottom: ms(20);
+}
+
+
+ul.contact__list {
+  list-style-type: none;
+  display: block;
+
+  li {
+    padding: ms(-4);
+    font-size: ms(-2);
+
+    a {
+     margin-left: ms(2);
+
+
+    }
+
+
+  }
+
+}
+
+.icon {
+  font-family: Icomoon;
+  font-size: ms(2);
+  color: $color-background;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon--twitter:before {
+    content: "\ea96";
+}
+
+.icon--git:before {
+    content: "\eab0";
+}
+
+.icon--codepen:before {
+    content: "\eae8";
+}
+
+.icon--viewbug:before {
+  content: "\e999";
+}
+
+.icon--linkedin:before {
+  content: "\eac9";
+}
+
 
 
 /*======================================
@@ -251,7 +376,27 @@
 
 
 
-}
+  }
+
+
+ /*----------  CONTACT  ----------*/
+
+
+  .contact__text {
+    @include span(6);
+  }
+
+  .contact_links {
+   @include span(6 last);
+ }
+
+ .contact_links, .contact__text {
+  padding: 2em;
+ }
+
+
+
+
 
 }
 
