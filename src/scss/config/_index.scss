@@ -5,7 +5,7 @@
 @font-face {
   font-family: 'IcoMoon';
 
-  src: url('IcoMoon-Free.ttf')  format('truetype'); /* Legacy iOS */
+  src: url('../fonts/IcoMoon-Free.ttf')  format('truetype'); /* Legacy iOS */
 }
 
 
@@ -13,8 +13,7 @@ $font-family--primary    : 'Raleway', serif;
 $font-family--secondary  : 'Lora', serif;
 
 
-// Icons
-@import url(http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
+
 
 
 // Susy
