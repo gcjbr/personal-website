@@ -2,11 +2,11 @@ $(document).ready(function(){
 
 
   $(window).scroll(function () {
-      var scrollTop = $(window).scrollTop();
-      var height = $(window).height();
-      $('.header').css({
-          'opacity': ((height - scrollTop) / height)
-      });
+    var scrollTop = $(window).scrollTop();
+    var height = $(window).height();
+    $('.header').css({
+      'opacity': ((height - scrollTop) / height)
+    });
   });
 
   $('.gallery__figure').hover(

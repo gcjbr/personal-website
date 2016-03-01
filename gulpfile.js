@@ -28,7 +28,7 @@ var dist          = 'dist/';
 
 var configs = {
 
-    browserSync: {
+ browserSync: {
         server: {
             baseDir: dist
         },
